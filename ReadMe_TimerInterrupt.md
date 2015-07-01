@@ -178,7 +178,7 @@ MODE |   WGM01  |   WGM00  | Mode of Opreation   |    TOP    |Update of OCR|  TO
  3   |     1    |    1     |       FAST PWM      |   0XFF    |     TOP     |     MAX    |
  
  
- 
+* http://www.fiz-ix.com/2012/01/how-to-configure-arduino-timer-2-registers-to-drive-an-ultrasonic-transducer-with-a-square-wave/
 * http://maxembedded.com/2011/08/avr-timers-pwm-mode-part-i/
 * http://www.righto.com/2009/07/secrets-of-arduino-pwm.html
 * https://www.youtube.com/watch?v=9JXGIeM3BSI
