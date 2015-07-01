@@ -88,7 +88,7 @@ y  is Bit
 Because compare match register = 38 is less than maximum count 255 (Timer0/8bit) and less than 65536 counts (Timer1/16bit),
 the frequencies can be handled by 8bit Timer0/Timer2 or 16bit Timer1. Now lets calculate the frequency for a check.
 
-`Interrupt Frequency (Hz) = (Arduino clock speed 16,000,000Hz) / (1024 * (compare match register + 1)) = 400Hz`
+`Interrupt Frequency (Hz) = (clock speed 16,000,000Hz) / (presclale(1024) * (compare match register + 1)) = 400Hz`
 
 ###### Example 2: Capture an Interrupt @ 2500us/400Hz using 8 prescale
 
@@ -101,6 +101,6 @@ Because compare match register = 4999 is greater than 255 of 8bit, Timer0 or Tim
 
 Now lets calculate the frequency for a check.
 
-`Interrupt Frequency (Hz) = (Arduino clock speed 16,000,000Hz) / (prescaler(8) * (compare match register(4999) + 1)) = 400Hz`
+`Interrupt Frequency (Hz) = (clock speed 16,000,000Hz) / (presclale (8) * (compare match register(4999) + 1)) = 400Hz`
  
  
