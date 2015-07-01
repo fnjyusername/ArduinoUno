@@ -105,7 +105,7 @@ Now lets calculate the frequency for a check.
 `Interrupt Freq (Hz) = (clockspeed 16,000,000Hz) / (presclale (8) * (compare match register(4999) + 1)) = 400Hz`
  
  
-##### TIMER PIN ASSIGNMENT
+##### TIMER OUTPUT PIN ASSIGNMENT OCnc, Timer(n), Output channel (c)
 
 Timer  | output	|Arduino| Chip | Port Pin 
 -------|--------|-------|------|---------
