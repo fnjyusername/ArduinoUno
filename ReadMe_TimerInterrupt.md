@@ -63,6 +63,14 @@ Prescale  | CS22 |CS21 |CS20 |REMARKS                  |
  256      |   1  |  0  |  0  |                         |  
  1024     |   0  |  0  |  1  |                         |
  
+
+```
+CLOCK SELECT LEGEND: CSxy
+CS is Clock Source
+x  is Timer number i.e. 2 for Timer2, 1 for Timer1, 0 for Timer0 
+y  is Bit
+```
+  
  Example:
  
 
