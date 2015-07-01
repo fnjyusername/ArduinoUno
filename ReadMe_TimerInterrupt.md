@@ -117,3 +117,4 @@ Timer2 |  OC2A	 |  11	  | 17	  |  PB3
 Timer2 |  OC2B	 |  3	   |  5  	|  PD3
 
 http://www.righto.com/2009/07/secrets-of-arduino-pwm.html
+https://www.youtube.com/watch?v=9JXGIeM3BSI
