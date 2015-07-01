@@ -72,11 +72,11 @@ y  is Bit
 ```
 
 
-###### `Now we can calculate the interrupt frequency with the following equation:`
-Interrupt Frequency (Hz) = (Arduino clock speed 16,000,000Hz) / (prescaler * (compare match register + 1))
+###### Now we can calculate the interrupt frequency with the following equation:
+`Interrupt Frequency (Hz) = (Arduino clock speed 16,000,000Hz) / (prescaler * (compare match register + 1))`
 
-###### `We can also solve for the compare match register value that will give your desired interrupt frequency:`
-compare match register = [ 16,000,000Hz/ (prescaler * desired interrupt frequency) ] - 1
+###### We can also solve for the compare match register value that will give your desired interrupt frequency:
+`compare match register = [ 16,000,000Hz/ (prescaler * desired interrupt frequency) ] - 1`
 
 Example 1: Capture an Interrupt @ 2500us/400Hz using 1024 prescale
 
@@ -92,11 +92,14 @@ the frequencies can be handled by 8bit Timer0/Timer2 or 16bit Timer1. Now lets c
 
 Example 2: Interrupt @ 2500us/400Hz using 8 prescale
 
-`compare match register = [ 16,000,000Hz/ (prescaler(8) * desired interrupt frequency(400)) ] - 1   = 499`
+`compare match register = [ 16,000,000Hz/ (prescaler(8) * desired interrupt frequency(400)) ] - 1   = 4999`
 
-499 > 255   Not Ok for 8bit Timer0/Timer2  
-499 < 65536 Ok for 16bit Timer1
+4999 > 255   Not Ok for 8bit Timer0/Timer2  
+4999 < 65536 Ok for 16bit Timer1
 
-`Interrupt Frequency (Hz) = (Arduino clock speed 16,000,000Hz) / (1024 * (compare match register + 1)) = 400Hz`
+Because compare match register = 4999 is greater than 255 of 8bit, Timer0 or Timer2 cannot handle the frequency on 8 prescale, but we can use 16bit Timer1 at prescale of 8.
+
+Now lets calculate the frequency for a check.
+`Interrupt Frequency (Hz) = (Arduino clock speed 16,000,000Hz) / (prescaler(8) * (compare match register(4999) + 1)) = 400Hz`
  
  
