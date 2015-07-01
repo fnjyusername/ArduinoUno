@@ -120,6 +120,15 @@ Timer1 |  OCR1B	 |  10	  | 16	  |  PB2
 Timer2 |  OCR2A	 |  11	  | 17	  |  PB3
 Timer2 |  OCR2B	 |  3	   |  5  	|  PD3
 
+### Default to Arduino
+The Arduino performs some initialization of the timers. 
+The Arduino initializes the prescaler on all three timers to divide the clock by 64. 
+Timer 0 is initialized to Fast PWM, while Timer 1 and Timer 2 is initialized to Phase Correct PWM. 
+See the Arduino source file wiring.c for details. 
+
+The Arduino uses Timer 0 internally for the millis() and delay() functions, so be warned that changing the frequency of this timer will cause those functions to be erroneous. Using the PWM outputs is safe if you don't change the frequency, though. 
+
+
 * http://www.righto.com/2009/07/secrets-of-arduino-pwm.html
 * https://www.youtube.com/watch?v=9JXGIeM3BSI
 
