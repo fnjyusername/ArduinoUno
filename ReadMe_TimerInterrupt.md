@@ -136,7 +136,7 @@ Timer2 |    64  	 |  PHASE CORRECT |                   	  |
 
 #####Note: Using the PWM outputs is safe if you don't change the frequency
 
-The Arduino uses Timer 0 internally for the millis() and delay() functions, so be warned that changing the frequency of this timer will cause those functions to be erroneous. Using the PWM outputs is safe if you don't change the frequency, though. 
+The Arduino uses Timer 0 internally for the millis() and delay() functions, so be warned that changing the frequency of this timer will cause those functions to be erroneous. 
 
 
 * http://www.righto.com/2009/07/secrets-of-arduino-pwm.html
