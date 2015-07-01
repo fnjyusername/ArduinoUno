@@ -48,7 +48,7 @@ Prescale  | CS12 |CS11 |CS10 |REMARKS                  |
  0        |   0  |  0  |  0  |  Timer Counter Stop     |     
  1        |   0  |  0  |  1  |  No Prescale (Fastest)  | 
  8        |   0  |  1  |  0  |                         |
- 34       |   0  |  1  |  1  |                         | 
+ 64       |   0  |  1  |  1  |                         | 
  256      |   1  |  0  |  0  |                         |  
  1024     |   1  |  0  |  1  |                         | 
 
@@ -59,7 +59,7 @@ Prescale  | CS22 |CS21 |CS20 |REMARKS                  |
  0        |   0  |  0  |  0  |  Timer Counter Stop     |     
  1        |   0  |  0  |  1  |  No Prescale (Fastest)  | 
  8        |   0  |  1  |  0  |                         |
- 34       |   0  |  1  |  1  |                         | 
+ 64       |   0  |  1  |  1  |                         | 
  256      |   1  |  0  |  0  |                         |  
  1024     |   1  |  0  |  1  |                         |
  
@@ -105,3 +105,7 @@ Now lets calculate the frequency for a check.
 `Interrupt Freq (Hz) = (clockspeed 16,000,000Hz) / (presclale (8) * (compare match register(4999) + 1)) = 400Hz`
  
  
+##### TIMER PIN ASSIGNMENT
+Timer 0 (pins 5 and 6)
+Timer 1 (pins 9 and 10)
+Timer 2 (pins 11 and 3)
