@@ -145,5 +145,16 @@ The Arduino uses Timer 0 internally for the millis() and delay() functions, so b
 
 ## PWM
 
+```c
+void Setup():
+  pinMode(3, OUTPUT);
+  pinMode(11, OUTPUT);
+  TCCR2A = _BV(COM2A1) | _BV(COM2B1) | _BV(WGM20);
+  TCCR2B = _BV(CS22);
+
+void loop():
+  OCR2A = 180;  //OCR2A duty cycle range 1 to 255 Output to Pin 3
+  OCR2B = 50;   //OCR2B duty cycle range 1 to 255 Output to Pin 11 
+```
 
 
