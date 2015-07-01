@@ -151,8 +151,8 @@ void Setup():
   TCCR2B = _BV(CS22);
 
 void loop():
-  OCR2A = 180;  //OCR2A duty cycle range 1 to 255 Output to Pin 3
-  OCR2B = 50;   //OCR2B duty cycle range 1 to 255 Output to Pin 11 
+  OCR2A = 125;   //49.0% Duty Cycle, OCR2A duty cycle range 1 to 255 Output to Pin 3
+  OCR2B =  20;   // 7.8% Duty Cycle, OCR2B duty cycle range 1 to 255 Output to Pin 11 
 ```
 
 
