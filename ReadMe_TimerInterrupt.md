@@ -30,6 +30,19 @@ We can control the speed of the timer counter incrementation using a prescaler. 
 
 CLOCK SELECT BIT
 
+TIMER0    
+
+Prescale  | CS02 |CS01 |CS00 |REMARKS                  |         
+----------|------|-----|-----|-------------------------|
+ 0        |   0  |  0  |  0  |  Timer Counter Stop     |     
+ 1        |   0  |  0  |  1  |  No Prescale (Fastest)  | 
+ 8        |   0  |  1  |  0  |                         |
+ 34       |   0  |  1  |  1  |                         | 
+ 256      |   1  |  0  |  0  |                         |  
+ 1024     |   0  |  0  |  1  |                         | 
+ 
+ TIMER1    
+
 Prescale  | CS12 |CS11 |CS10 |REMARKS                  |         
 ----------|------|-----|-----|-------------------------|
  0        |   0  |  0  |  0  |  Timer Counter Stop     |     
@@ -37,8 +50,19 @@ Prescale  | CS12 |CS11 |CS10 |REMARKS                  |
  8        |   0  |  1  |  0  |                         |
  34       |   0  |  1  |  1  |                         | 
  256      |   1  |  0  |  0  |                         |  
- 1024     |   0  |  0  |  1  |                         |  
+ 1024     |   0  |  0  |  1  |                         | 
 
+ TIMER2    
+
+Prescale  | CS22 |CS21 |CS20 |REMARKS                  |         
+----------|------|-----|-----|-------------------------|
+ 0        |   0  |  0  |  0  |  Timer Counter Stop     |     
+ 1        |   0  |  0  |  1  |  No Prescale (Fastest)  | 
+ 8        |   0  |  1  |  0  |                         |
+ 34       |   0  |  1  |  1  |                         | 
+ 256      |   1  |  0  |  0  |                         |  
+ 1024     |   0  |  0  |  1  |                         |
+ 
  Example:
  
 
