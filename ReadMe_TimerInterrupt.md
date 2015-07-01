@@ -100,7 +100,7 @@ the frequencies can be handled by 8bit Timer0/Timer2 or 16bit Timer1. Now lets c
 
 Because compare match register = 4999 is greater than 255 of 8bit, Timer0 or Timer2 cannot handle the frequency on 8 prescale, but we can use 16bit Timer1 at prescale of 8.
 
-Now lets calculate the frequency for a check.
+/Now lets calculate the frequency for a check.
 
 `Interrupt Freq (Hz) = (clockspeed 16,000,000Hz) / (presclale (8) * (compare match register(4999) + 1)) = 400Hz`
  
