@@ -138,13 +138,13 @@ Timer2 |    64  	 |  PHASE CORRECT |                   	  |
 
 The Arduino uses Timer 0 internally for the millis() and delay() functions, so be warned that changing the frequency of this timer will cause those functions to be erroneous. 
 
-
+* http://maxembedded.com/2011/08/avr-timers-pwm-mode-part-i/
 * http://www.righto.com/2009/07/secrets-of-arduino-pwm.html
 * https://www.youtube.com/watch?v=9JXGIeM3BSI
 
 
-## PWM
-
+## BRIEF START ON PWM
+Below is our first illustration of creating PWM output at Pin3 (OCR2A) and Pin 11 (OCR2B), we recall these pin is were the timer2 output channel A and B is routed. We need to first set this pin as OUTPUT with pinMode.
 ```c
 Example using Default setting of Timer2 i.e. prescaled to 64
 
@@ -159,4 +159,14 @@ void loop():
   OCR2B = 50;   //OCR2B duty cycle range 1 to 255 Output to Pin 11 
 ```
 
+Next is how to  set Timer Register in order to configure the mode i.e. NORMAL, PHASE CORRECT, FAST PWM, CTC, etc see Table
 
+## Methodology – PWM Mode
+
+REGISTER  |   7 bit  |   6 bit  |   5 bit  |   4 bit  |   3 bit  |  2 bit   |  1 bit   |  0 bit   |
+----------|----------|----------|----------|----------|----------|----------|----------|----------|
+ TCCR0A   |  COM0A1  |  COM0A0  |  COM0B1  |  COM0B0  |     /    |     /    |   WGM01  |   WGM00  |
+ TCCR1A   |  COM1A1  |  COM1A0  |  COM1B1  |  COM1B0  |     /    |     /    |   WGM11  |   WGM10  |
+ TCCR2A   |  COM2A1  |  COM2A0  |  COM2B1  |  COM2B0  |     /    |     /    |   WGM21  |   WGM20  |
+ 
+ 
