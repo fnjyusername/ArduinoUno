@@ -126,6 +126,16 @@ The Arduino initializes the prescaler on all three timers to divide the clock by
 Timer 0 is initialized to Fast PWM, while Timer 1 and Timer 2 is initialized to Phase Correct PWM. 
 See the Arduino source file wiring.c for details. 
 
+######DEFAULT SETTINGS
+
+Timer  | Prescale	|     PWM Mode   |  Default Utilization |
+-------|--------  |----------------|----------------------|
+Timer0 |    64  	 |  FAST	PWM      | millis() and delay()	|
+Timer1 |    64  	 |  PHASE CORRECT | Tone lib and  micros |  
+Timer2 |    64  	 |  PHASE CORRECT |                   	  |
+
+#####Note: Using the PWM outputs is safe if you don't change the frequency
+
 The Arduino uses Timer 0 internally for the millis() and delay() functions, so be warned that changing the frequency of this timer will cause those functions to be erroneous. Using the PWM outputs is safe if you don't change the frequency, though. 
 
 
