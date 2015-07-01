@@ -182,3 +182,4 @@ MODE |   WGM01  |   WGM00  | Mode of Opreation   |    TOP    |Update of OCR|  TO
 * http://maxembedded.com/2011/08/avr-timers-pwm-mode-part-i/
 * http://www.righto.com/2009/07/secrets-of-arduino-pwm.html
 * https://www.youtube.com/watch?v=9JXGIeM3BSI
+* http://extremeelectronics.co.in/avr-tutorials/timers-in-compare-mode-part-i/
