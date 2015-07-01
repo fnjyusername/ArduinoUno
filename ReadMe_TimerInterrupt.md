@@ -104,17 +104,27 @@ Now lets calculate the frequency for a check.
 
 `Interrupt Freq (Hz) = (clockspeed 16,000,000Hz) / (presclale (8) * (compare match register(4999) + 1)) = 400Hz`
  
- 
-##### TIMER OUTPUT PIN ASSIGNMENT OCnc, Timer(n), Output channel (c)
+### Using the ATmega PWM registers directly 
+The ATmega328P has three timers known as Timer 0, Timer 1, and Timer 2. Each timer has two output compare registers e.g. OC0A and OC0B for Timer0 (see TABLE 1.0) that control the PWM width for the timer's two outputs: when the timer reaches the compare register value, the corresponding output is toggled. 
+
+The two outputs for each timer will normally have the same frequency, but can have different duty cycles (depending on the respective output compare register). 
+
+##### TABLE 1.0 TIMER OUTPUT PIN ASSIGNMENT OCRnx, Timer(n), Output channel (x)
 
 Timer  | output	|Arduino| Chip | Port Pin 
 -------|--------|-------|------|---------
-Timer0 |  OC0A	 |  6	   | 12	  |  PD6
-Timer0 |  OC0B	 |  5	   | 11	  |  PD5
-Timer1 |  OC1A	 |  9	   | 15	  |  PB1
-Timer1 |  OC1B	 |  10	  | 16	  |  PB2
-Timer2 |  OC2A	 |  11	  | 17	  |  PB3
-Timer2 |  OC2B	 |  3	   |  5  	|  PD3
+Timer0 |  OCR0A	 |  6	   | 12	  |  PD6
+Timer0 |  OCR0B	 |  5	   | 11	  |  PD5
+Timer1 |  OCR1A	 |  9	   | 15	  |  PB1
+Timer1 |  OCR1B	 |  10	  | 16	  |  PB2
+Timer2 |  OCR2A	 |  11	  | 17	  |  PB3
+Timer2 |  OCR2B	 |  3	   |  5  	|  PD3
 
 * http://www.righto.com/2009/07/secrets-of-arduino-pwm.html
 * https://www.youtube.com/watch?v=9JXGIeM3BSI
+
+
+## PWM
+
+
+
