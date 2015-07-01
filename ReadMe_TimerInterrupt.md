@@ -70,8 +70,15 @@ CS is Clock Source
 x  is Timer number i.e. 2 for Timer2, 1 for Timer1, 0 for Timer0 
 y  is Bit
 ```
-  
- Example:
+
+
+###### `Now we can calculate the interrupt frequency with the following equation:`
+Interrupt Frequency (Hz) = (Arduino clock speed 16,000,000Hz) / (prescaler * (compare match register + 1))
+
+###### `We can also solve for the compare match register value that will give your desired interrupt frequency:`
+compare match register = [ 16,000,000Hz/ (prescaler * desired interrupt frequency) ] - 1
+
+Example:
  
 
 
