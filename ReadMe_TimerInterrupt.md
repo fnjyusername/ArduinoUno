@@ -164,10 +164,22 @@ Timers are usually used in one of the following modes: Next is how to  set Timer
 
 ## Methodology – PWM Mode
 
+#### TIMER REGISTER
+
 REGISTER  |   7 bit  |   6 bit  |   5 bit  |   4 bit  |   3 bit  |  2 bit   |  1 bit   |  0 bit   |
 ----------|----------|----------|----------|----------|----------|----------|----------|----------|
  TCCR0A   |  COM0A1  |  COM0A0  |  COM0B1  |  COM0B0  |     /    |     /    |   WGM01  |   WGM00  |
  TCCR1A   |  COM1A1  |  COM1A0  |  COM1B1  |  COM1B0  |     /    |     /    |   WGM11  |   WGM10  |
  TCCR2A   |  COM2A1  |  COM2A0  |  COM2B1  |  COM2B0  |     /    |     /    |   WGM21  |   WGM20  |
+
+#### Waveform Generation Mode –  
+ 
+MODE |   WGM01  |   WGM00  | Mode of Opreation   |    TOP    |Update of OCR|  TOVx Flag | 
+-----|----------|----------|---------------------|-----------|-------------|------------|
+ 0   |     0    |    0     |        NORMAL       |   0XFF    |  Immidiate  |     MAX    |
+ 1   |     0    |    1     |  PWM, PHASE CORRECT |   0XFF    |     TOP     |     BOT    |
+ 2   |     1    |    0     |         CTC         |   OCRX    |  Immidiate  |     MAX    |
+ 3   |     1    |    1     |       FAST PWM      |   0XFF    |     TOP     |     MAX    |
+ 
  
  
