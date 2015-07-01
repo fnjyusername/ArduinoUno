@@ -106,6 +106,9 @@ Now lets calculate the frequency for a check.
  
  
 ##### TIMER PIN ASSIGNMENT
-Timer 0 (pins 5 and 6)
-Timer 1 (pins 9 and 10)
-Timer 2 (pins 11 and 3)
+
+*Timer 0 (pins 5 and 6)
+*Timer 1 (pins 9 and 10)
+*Timer 2 (pins 11 and 3)
+
+http://www.righto.com/2009/07/secrets-of-arduino-pwm.html
