@@ -146,6 +146,8 @@ The Arduino uses Timer 0 internally for the millis() and delay() functions, so b
 ## PWM
 
 ```c
+###### Example using Default setting of Timer2 i.e. prescaled to 64
+
 void Setup():
   pinMode(3, OUTPUT);
   pinMode(11, OUTPUT);
