@@ -126,7 +126,7 @@ The Arduino initializes the prescaler on all three timers to divide the clock by
 Timer 0 is initialized to Fast PWM, while Timer 1 and Timer 2 is initialized to Phase Correct PWM. 
 See the Arduino source file wiring.c for details. 
 
-######DEFAULT SETTINGS
+######TABLE 2.0 DEFAULT SETTINGS
 
 Timer  | Prescale	|     PWM Mode   |  Default Utilization |
 -------|--------  |----------------|----------------------|
@@ -159,7 +159,8 @@ void loop():
   OCR2B = 50;   //OCR2B duty cycle range 1 to 255 Output to Pin 11 
 ```
 
-Next is how to  set Timer Register in order to configure the mode i.e. NORMAL, PHASE CORRECT, FAST PWM, CTC, etc see Table
+
+Timers are usually used in one of the following modes: Next is how to  set Timer Register in order to configure the mode i.e. NORMAL, Phase correct PWM, FAST PWM, CTC, (Recall Arduino is initialized at default mode on TABLE 2.0 above)
 
 ## Methodology – PWM Mode
 
