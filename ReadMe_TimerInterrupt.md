@@ -72,10 +72,10 @@ y  is Bit
 ```
 
 
-###### Now we can calculate the interrupt frequency with the following equation:
+##### FORMULA 1: Now we can calculate the interrupt frequency with the following equation:
 `Interrupt Freq (Hz) = (Arduino clock speed 16,000,000Hz) / (prescaler * (compare match register + 1))`
 
-###### We can also solve for the compare match register value that will give your desired interrupt frequency:
+##### FORMULA 2: We can also solve for the compare match register value that will give your desired interrupt frequency:
 `compare match register = [ 16,000,000Hz/ (prescaler * desired interrupt frequency) ] - 1`
 
 ###### Example 1: Capture an Interrupt @ 2500us/400Hz using 1024 prescale
