@@ -90,7 +90,7 @@ the frequencies can be handled by 8bit Timer0/Timer2 or 16bit Timer1. Now lets c
 
 `Interrupt Frequency (Hz) = (Arduino clock speed 16,000,000Hz) / (1024 * (compare match register + 1)) = 400Hz`
 
-###### Example 2: Interrupt @ 2500us/400Hz using 8 prescale
+###### Example 2: Capture an Interrupt @ 2500us/400Hz using 8 prescale
 
 `compare match register = [ 16,000,000Hz/ (prescaler(8) * desired interrupt frequency(400)) ] - 1   = 4999`
 
