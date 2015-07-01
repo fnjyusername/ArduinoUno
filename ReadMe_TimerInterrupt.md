@@ -78,8 +78,9 @@ Interrupt Frequency (Hz) = (Arduino clock speed 16,000,000Hz) / (prescaler * (co
 ###### `We can also solve for the compare match register value that will give your desired interrupt frequency:`
 compare match register = [ 16,000,000Hz/ (prescaler * desired interrupt frequency) ] - 1
 
-Example 1: Interrupt @ 2500us/400Hz 
-`compare match register = [ 16,000,000Hz/ (prescaler(1024) * desired interrupt frequency(400)) ] - 1   = 38 `
+Example 1: Capture an Interrupt @ 2500us/400Hz 
+
+`compare match register = [ 16,000,000Hz/ (prescaler(1024) * desired interrupt frequency(400)) ] - 1   = 38`
 
 38 < 255   Ok for 8bit Timer0/Timer2  
 38 < 65536 Ok for 8bit Timer1
