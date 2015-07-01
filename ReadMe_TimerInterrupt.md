@@ -138,10 +138,6 @@ Timer2 |    64  	 |  PHASE CORRECT |                   	  |
 
 The Arduino uses Timer 0 internally for the millis() and delay() functions, so be warned that changing the frequency of this timer will cause those functions to be erroneous. 
 
-* http://maxembedded.com/2011/08/avr-timers-pwm-mode-part-i/
-* http://www.righto.com/2009/07/secrets-of-arduino-pwm.html
-* https://www.youtube.com/watch?v=9JXGIeM3BSI
-
 
 ## BRIEF START ON PWM
 Below is our first illustration of creating PWM output at Pin3 (OCR2A) and Pin 11 (OCR2B), we recall these pin is were the timer2 output channel A and B is routed. We need to first set this pin as OUTPUT with pinMode.
@@ -183,3 +179,6 @@ MODE |   WGM01  |   WGM00  | Mode of Opreation   |    TOP    |Update of OCR|  TO
  
  
  
+* http://maxembedded.com/2011/08/avr-timers-pwm-mode-part-i/
+* http://www.righto.com/2009/07/secrets-of-arduino-pwm.html
+* https://www.youtube.com/watch?v=9JXGIeM3BSI
