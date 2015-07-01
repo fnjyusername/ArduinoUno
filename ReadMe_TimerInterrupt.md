@@ -107,8 +107,13 @@ Now lets calculate the frequency for a check.
  
 ##### TIMER PIN ASSIGNMENT
 
-*Timer 0 (pins 5 and 6)
-*Timer 1 (pins 9 and 10)
-*Timer 2 (pins 11 and 3)
+Timer  | output	|Arduino| Chip | Pin name
+-------|--------|-------|------|-------
+Timer0 |  OC0A	 |  6	   | 12	  |  PD6
+Timer0 |  OC0B	 |  5	   | 11	  |  PD5
+Timer1 |  OC1A	 |  9	   | 15	  |  PB1
+Timer1 |  OC1B	 |  10	  | 16	  |  PB2
+Timer2 |  OC2A	 |  11	  | 17	  |  PB3
+Timer2 |  OC2B	 |  3	   |  5  	|  PD3
 
 http://www.righto.com/2009/07/secrets-of-arduino-pwm.html
