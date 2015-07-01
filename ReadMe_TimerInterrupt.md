@@ -107,8 +107,8 @@ Now lets calculate the frequency for a check.
  
 ##### TIMER PIN ASSIGNMENT
 
-Timer  | output	|Arduino| Chip | Pin name
--------|--------|-------|------|-------
+Timer  | output	|Arduino| Chip | Port Pin 
+-------|--------|-------|------|---------
 Timer0 |  OC0A	 |  6	   | 12	  |  PD6
 Timer0 |  OC0B	 |  5	   | 11	  |  PD5
 Timer1 |  OC1A	 |  9	   | 15	  |  PB1
