@@ -111,8 +111,8 @@ The two outputs for each timer will normally have the same frequency, but can ha
 
 ##### TABLE 1.0 TIMER OUTPUT PIN ASSIGNMENT OCRnx, Timer(n), Output channel (x)
 
-Timer  | output	|Arduino| Chip | Port Pin 
--------|--------|-------|------|---------
+Timer  | output	 |Arduino| Chip | Port Pin 
+-------|---------|-------|------|---------
 Timer0 |  OCR0A	 |  6	   | 12	  |  PD6
 Timer0 |  OCR0B	 |  5	   | 11	  |  PD5
 Timer1 |  OCR1A	 |  9	   | 15	  |  PB1
